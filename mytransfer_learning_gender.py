@@ -4,10 +4,22 @@ import os, sys
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image_dataset_from_directory
 
-PATH = 'data/gender_dataset'
-train_dir = os.path.join(PATH, 'train')
-validation_dir = os.path.join(PATH, 'valid')
-test_dir = os.path.join(PATH, 'test')
+#CREATING NECESSARY FOLDERS
+PLOTS_DIR = 'plots'
+MODELS_DIR = 'models'
+DATA_DIR = 'data'
+
+PARENT_DIRECTORY = ''
+DIRECTORIES = ['plots', 'models', 'data', 'checkpoint', 'saved_model']
+for folder in DIRECTORIES:
+  if not os.path.exists(folder):
+      os.makedirs(folder)
+
+
+DATASET_PATH = 'data/gender_dataset'
+train_dir = os.path.join(DATASET_PATH, 'train')
+validation_dir = os.path.join(DATASET_PATH, 'valid')
+test_dir = os.path.join(DATASET_PATH, 'test')
 
 img_width = 224
 img_height = 224
