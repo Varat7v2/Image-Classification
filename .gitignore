@@ -1,0 +1,10 @@
+cats_and_dogs_filtered/
+checkpoint/
+data/
+data_gender/
+flower_photos/
+flower_test/
+gender_dataset/
+models/
+plots/
+saved_model/
